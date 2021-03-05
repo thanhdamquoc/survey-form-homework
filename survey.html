@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Market Research Survey</title>
+    <style>
+        .survey-list {
+            list-style-type: none;
+        }
+        .survey-line {
+            margin-left: -40px;
+            margin-top: 20px;
+        }
+        .question-label {
+            font-weight: bold;
+        }
+        .select-range {
+            width: 400px;
+        }
+        .data-col {
+            width: 15%;
+            text-align: center;
+        }
+        .first-col {
+            width: 30%;
+            font-weight: bold;
+        }
+        tr:nth-child(odd) {background-color: #f2f2f2;}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form name="survey-form" action="survey.html" method="get">
+            <h1>Market Research Survey</h1>
+            <p>Please take a few moments to complete this satisfaction survey</p>
+            <hr>
+            <ul class="survey-list">
+                <li class="survey-line">
+                    <label class="question-label">What is your age range?</label><br>
+                    <select name="age-range" class="select-range">
+                        <option value="18to24">18-24</option>
+                        <option value="25to34">25-34</option>
+                        <option value="35to50">35-50</option>
+                        <option value="above50">50+</option>
+                    </select>
+                </li>
+                <li class="survey-line">
+                    <label class="question-label">What is your yearly income range?</label><br>
+                    <select name="income-range" class="select-range">
+                        <option value="0to25k">$0 - $25,000</option>
+                        <option value="25kto50k">$25,001 - $50,000</option>
+                        <option value="50kto100k">$50,001 - $100,000</option>
+                        <option value="above100k">$100,000+</option>
+                    </select>
+                </li>
+                <li class="survey-line">
+                    <label class="question-label">Gender Identity</label><br>
+                    <input type="radio" name="gender" value="male">Male<br>
+                    <input type="radio" name="gender" value="female">Female<br>
+                    <input type="radio" name="gender" value="nonbinary">Nonbinary<br>
+                    <input type="radio" name="gender" value="other">Other<br>
+                    <input type="text" name="gender-other" style="margin-left: 25px">
+                </li>
+                <li class="survey-line">
+                    <label class="question-label">Which of the following products have you purchased in the last 2 months. Please check all that apply</label><br>
+                    <input type="checkbox" name="products-purchased" value="product1">Product 1<br>
+                    <input type="checkbox" name="products-purchased" value="product2">Product 2<br>
+                    <input type="checkbox" name="products-purchased" value="product3">Product 3<br>
+                </li>
+                <li class="survey-line">
+                    <label class="question-label">How often would you use our new product?</label><br>
+                    <input type="radio" name="use-frequency" value="daily">Daily<br>
+                    <input type="radio" name="use-frequency" value="weekly">Weekly<br>
+                    <input type="radio" name="use-frequency" value="monthly">Monthly<br>
+                </li>
+                <li class="survey-line">
+                    <label class="question-label">What would you pay for the new product?</label><br>
+                    $ <input type="number" name="would-pay-dollars" style="width: 90px"> . <input type="number" name="would-pay-cents" size="1" style="width: 30px"><br>
+                    <label style="margin-left: 15px">Dollars</label><label style="margin-left: 60px">Cents</label>
+                </li>
+                <li class="survey-line">
+                    <label class="question-label">What features would you like to see in the new products</label><br>
+                    <textarea style="width: 100%;height: 100px"></textarea>
+                </li>
+                <li class="survey-line">
+                    <label class="question-label">Please rate your level of agreement with the following statements.</label><br>
+                    <table>
+                        <tr style="background: gray">
+                            <th class="first-col"></th>
+                            <th class="data-col">Strongly Disagree</th>
+                            <th class="data-col">Disagree</th>
+                            <th class="data-col">Agree</th>
+                            <th class="data-col">Strongly Agree</th>
+                        </tr>
+                        <tr>
+                            <td class="first-col">Our products are priced fairly.</td>
+                            <td class="data-col"><input type="radio" name="product-priced-fairly" value="1"><br>1 </td>
+                            <td class="data-col"><input type="radio" name="product-priced-fairly" value="2"><br>2 </td>
+                            <td class="data-col"><input type="radio" name="product-priced-fairly" value="3"><br>3 </td>
+                            <td class="data-col"><input type="radio" name="product-priced-fairly" value="4"><br>4 </td>
+                        </tr>
+                        <tr>
+                            <td class="first-col">Our products are high quality.</td>
+                            <td class="data-col"><input type="radio" name="product-high-quality" value="1"><br>1 </td>
+                            <td class="data-col"><input type="radio" name="product-high-quality" value="2"><br>2 </td>
+                            <td class="data-col"><input type="radio" name="product-high-quality" value="3"><br>3 </td>
+                            <td class="data-col"><input type="radio" name="product-high-quality" value="4"><br>4 </td>
+                        </tr>
+                        <tr>
+                            <td class="first-col">You would recommend our product to a friend or coworker.</td>
+                            <td class="data-col"><input type="radio" name="product-recommended" value="1"><br>1 </td>
+                            <td class="data-col"><input type="radio" name="product-recommended" value="2"><br>2 </td>
+                            <td class="data-col"><input type="radio" name="product-recommended" value="3"><br>3 </td>
+                            <td class="data-col"><input type="radio" name="product-recommended" value="4"><br>4 </td>
+                        </tr>
+                    </table>
+                </li>
+                <br>
+                <li><input type="submit" value="Submit" style="margin-left: -40px"></li>
+            </ul>
+        </form>
+    </div>
+</body>
+</html>
